@@ -1,0 +1,81 @@
+
+          body {
+                margin: 0;
+                font-family: sans-serif;
+                background: #1a1a1a;
+                overflow: hidden;
+                touch-action: none;
+                user-select: none;
+                
+
+                
+            }
+            .popup {
+                position: fixed;
+                top: 50px;
+                left: 50%;
+                transform: translateX(-50%) scale(0.8);
+                background: #222222;
+                color: #555555;
+                padding: 15px 25px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                opacity: 0;
+                animation: waveIn 1.5s ease forwards;
+            font-weight: bold;}
+
+                @keyframes waveIn {
+                    0%{
+                        transform: translateX(-50%)
+                         translateY(-30)
+                         scale(0.5);
+                        opacity: 0;
+                        }
+                    100% {
+                        
+                        transform: translateX(-50%)
+                         translateY(0)
+                         scale(1);
+                        opacity: 1;
+                    }
+                }
+                .join {
+                    background-color: white;
+                    font-weight: bold;
+                    font-size: medium;
+                    border-radius: 6px;
+                    border: none;
+                     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                     padding: 5px 10px;
+                     display: block;
+                     margin: 0 auto;
+                     position: relative;
+                     top: 350px;
+                }
+                .images {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin: 0 auto;
+                    display: block;
+                    position: relative;
+                    top: 180px;
+                }
+                .admin {
+                    position: fixed;
+                    bottom: 10px;
+                    left: 10px;
+                    color: white;
+                    font-size: 14px;
+                    line-height: 1.6;
+                }
+                .admin a {
+                    color: white;
+                    text-decoration: none;
+                }
+                .admin a:hover {
+                    text-decoration: underline;
+                }
+         
+        
