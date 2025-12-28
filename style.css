@@ -81,5 +81,36 @@
                 span {
                     color: #0f9d58;
                 }
+                .glow {
+                    color: #00ffea;
+                    text-align: center;
+                    margin: 20px auto 0 auto;
+                    max-width: 400px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    font-style: italic;
+                    animation: glowReview 2s ease-in-out forwards;
+                    opacity: 0;
+                }
+                @keyframes glowReview {
+                    0% {
+                        opacity: 0;
+                        text-shadow: none;
+                    }
+                    50% {
+                        opacity: 1;
+                        text-shadow: 0 0 10px #00ffe9, 
+                        0 0 20px #00ffe9, 
+                        0 0 30px #00ffe9,
+                        0 0 40px #0ff,
+                        0 0 70px #0ff,
+                    }
+                    100% {
+                        opacity: 1;
+                        text-shadow: 0 0 5px #00ffe9, 
+                        0 0 10px #00ffe9,
+                        0 0 20px #00ffe9;
+                    }
+                }
          
         
