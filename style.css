@@ -66,16 +66,14 @@
                     position: fixed;
                     bottom: 10px;
                     left: 10px;
-                    color: white;
-                    font-size: 14px;
-                    line-height: 1.6;
-                    font-weight: bold;
                     flex-direction: column;
-                    gap: 5px;
+                    gap: 8px;
                 }
-                .admin a {
+                .admin-first {
                     color: white;
                     text-decoration: none;
+                    font-weight: bold;
+                    font-size: 14px;
                 }
                 .admin a:hover {
                     text-decoration: underline;
