@@ -42,16 +42,33 @@
                     }
                 }
                 .join {
-                    background-color: white;
+                    background-color: #00c9ff;
+                    color: white;
                     font-weight: bold;
-                    font-size: medium;
-                    border-radius: 6px;
+                    font-size: 1rem;
+                    border-radius: 8px;
                     border: none;
-                     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-                     padding: 5px 10px;
-                     display: block;
-                     margin: 30px auto;
+                    padding: 12px 24px;
+                    box-shadow: 0 4px 15px rgba(0, 201, 255, 0.4);
+                    cursor: pointer;
+                    transition: background-color 0.3s ease, transform 0.2s ease;
+                    display: block;
+                    margin: 30px auto 0 auto;
                 }
+                .join:hover {
+                    background-color: #00a3cc;
+                    box-shadow: 0 6px 20px rgba(0, 163, 204, 0.6);
+                    transform: translateY(-2px);
+                }
+
+                .join:active {
+                    background-color: #008bb3;
+                    box-shadow: 0 3px 10px rgba(0, 139, 179, 0.7);
+                    transform: translateY(0);
+                }
+
+
+
                 .images {
                     width: 200px;
                     height: 200px;
