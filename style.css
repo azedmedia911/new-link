@@ -69,6 +69,9 @@
                     color: white;
                     font-size: 14px;
                     line-height: 1.6;
+                    font-weight: bold;
+                    flex-direction: column;
+                    gap: 5px;
                 }
                 .admin a {
                     color: white;
@@ -76,6 +79,9 @@
                 }
                 .admin a:hover {
                     text-decoration: underline;
+                }
+                span {
+                    color: #0f9d58;
                 }
          
         
