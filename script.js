@@ -11,3 +11,4 @@ function goToWhatsapp() {
         console.log("you choose not to join");
     } 
 }
+    
