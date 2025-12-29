@@ -6,6 +6,7 @@
                 overflow: hidden;
                 touch-action: none;
                 user-select: none;
+                padding-top: 40px;
                 
 
                 
@@ -134,8 +135,9 @@
       right: 10px;
       font-family: Arial, sans-serif;
       font-weight: bold;
-      font-size: 16px;
-      background: rgba(255, 255, 255, 0.8);
+      font-size: 12px;
+      background: rgba(0,0,0,0.6);
+      color: white;
       padding: 5px 10px;
       border-radius: 5px;
       user-select: none;
