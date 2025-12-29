@@ -12,30 +12,24 @@ function goToWhatsapp() {
     } 
 }
 
+  function updateDateTime() {
+    const now = new Date();
 
-   function updateDateTime() {
-  const now = new Date();
+    const options = { year: 'numeric', month: 'short', day: 'numeric' };
+    const dateString = now.toLocaleDateString(undefined, options);
 
-  let year = now.getFullYear();
-  let month = now.toLocaleString('default', { month: 'long' });
-  let day = now.getDate();
+    let hours = now.getHours();
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    const ampm = hours >= 12 ? 'PM' : 'AM';
 
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
 
-  let ampm = hours >= 12 ? 'PM' : 'AM';
-  hours = hours % 12;
-  hours = hours ? hours : 12;
+    const timeString = `hours:{minutes}:seconds{ampm}`;
 
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-  seconds = seconds < 10 ? '0' + seconds : seconds;
+    document.getElementById('datetime').textContent = `dateString |{timeString}`;
+  }
 
-  let dateString = `year{month} day`;
-  let timeString = `{hours}:minutes:{seconds} ampm`;
-
-  document.getElementById('datetime').textContent = `{dateString} | ${timeString}`;
-}
-
-setInterval(updateDateTime, 1000);
-updateDateTime(); 
+  setInterval(updateDateTime, 1000);
+  updateDateTime();
