@@ -12,24 +12,27 @@ function goToWhatsapp() {
     } 
 }
 
-  function updateDateTime() {
-    const now = new Date();
+ 
+function updateClock() {
+    const now = new Date(); 
 
-    const options = { year: 'numeric', month: 'short', day: 'numeric' };
-    const dateString = now.toLocaleDateString(undefined, options);
+    const date = now.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+    });
+    const time = now.toLocaleTimeString('en-US', {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+    });
 
-    let hours = now.getHours();
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const seconds = now.getSeconds().toString().padStart(2, '0');
-    const ampm = hours >= 12 ? 'PM' : 'AM';
+    const clockDisplay = `${date}<br>${time}`;
 
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
+    
+    document.getElementById('clock').innerHTML = clockDisplay;
+}
+updateClock();
 
-    const timeString = `hours:{minutes}:seconds{ampm}`;
-
-    document.getElementById('datetime').textContent = `dateString |{timeString}`;
-  }
-
-  setInterval(updateDateTime, 1000);
-  updateDateTime();
+setInterval(updateClock, 1000);
